@@ -30,7 +30,7 @@ const HomePage = (props) => {
 //   };
 // };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const client = await MongoClient.connect(process.env.MONGODB_URL);
 
   const db = client.db();
@@ -52,7 +52,6 @@ export const getStaticProps = async () => {
     props: {
       meetups: transformedMeetups,
     },
-    revalidate: 1,
   };
 };
 
