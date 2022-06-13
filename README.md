@@ -23,3 +23,4 @@ npm install
 ```
 npm run dev
 ```
+_Note: you need to add your own MongoDB url (under an environmental variable called MONGODB_URL) in order to successfully run the project on your local machine._
